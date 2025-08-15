@@ -1,9 +1,10 @@
 import Router from 'express'
+import { getAllUsers,createUsers,getOneUser } from '../controllers/userController.js'
 
-const uR = Router()
+export const uR = Router()
 
 uR.get("/",getAllUsers)
-uR.get("/",createUsers)
-uR.get("/id:",getOneUser)
+uR.post("/",createUsers)
+uR.get("/:id",getOneUser)
 // uR.get("/",getAllUsers)
 
